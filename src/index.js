@@ -24,30 +24,33 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const button = document.createElement("button");
     button.type = "submit";
-    button.style.background = "transparent";
+    button.style.background = "none";
     button.style.border = "none";
     button.style.cursor = "pointer";
     button.style.display = "flex";
     button.style.alignItems = "center";
+    button.style.flexShrink = "0";
 
     const svgIcon = document.createElementNS("http://www.w3.org/2000/svg", "svg");
     svgIcon.setAttribute("xmlns", "http://www.w3.org/2000/svg");
-    svgIcon.setAttribute("width", "24");
-    svgIcon.setAttribute("height", "24");
     svgIcon.setAttribute("viewBox", "0 0 24 24");
     svgIcon.setAttribute("fill", "none");
     svgIcon.setAttribute("stroke", "#000000");
-    svgIcon.setAttribute("stroke-width", "2");
     svgIcon.setAttribute("stroke-linecap", "round");
     svgIcon.setAttribute("stroke-linejoin", "round");
-    svgIcon.classList.add("lucide", "lucide-send-horizontal");
-    svgIcon.setAttribute("aria-label", "btnSubmit");
+    svgIcon.setAttribute("width", "24");
+    svgIcon.setAttribute("height", "24");
+    svgIcon.style.width = "24px";
+    svgIcon.style.height = "24px";
+    svgIcon.style.strokeWidth = "2";
 
     const path1 = document.createElementNS("http://www.w3.org/2000/svg", "path");
     path1.setAttribute("d", "m3 3 3 9-3 9 19-9Z");
+    path1.setAttribute("stroke", "#000000");
 
     const path2 = document.createElementNS("http://www.w3.org/2000/svg", "path");
     path2.setAttribute("d", "M6 12h16");
+    path2.setAttribute("stroke", "#000000");
 
     svgIcon.appendChild(path1);
     svgIcon.appendChild(path2);
